@@ -4,6 +4,7 @@ var c=document.getElementById("name");
 var d=document.getElementById("age");
 var e=document.getElementById("course");
 var f=document.getElementById("email");
+var phone=document.getElementById("phone");
 var three=document.getElementById("three")
 
 a.addEventListener("click",function(){
@@ -14,11 +15,12 @@ a.addEventListener("click",function(){
     <td>${d.value}</td>
     <td>${e.value}</td>
     <td>${f.value}</td>
-    <button onclick='deleteitem(event)' style="padding:5px 10px; text-align:center; margin-left:30px; margin-top:5px; margin-bottom:5px; cursor:pointer;">delete</button>`
+    <td>${phone.value}</td>
+    <td><button onclick='deleteitem(event)' style="padding:5px 10px; text-align:center; margin-left:30px; margin-top:5px; margin-bottom:5px; cursor:pointer;">delete</button></td>`
     b.append(g)
 })
 function deleteitem(event){
-    event.target.parentElement.remove()
+    event.target.closest("tr").remove()
 }
  
 function deleteitemone(){
